@@ -1,0 +1,18 @@
+      <table class="table table-bordered">
+        <tr>
+          <th>Full Name</th>
+          <th>Email Address</th>
+          <th>Home Address</th>
+          <th>Phone Number</th>
+          <th>Company Name</th>
+          <th>Action</th>
+        </tr>
+        <tr *ngFor="let u of data.UserList">
+            <td>{{ u.Name }}</td>
+            <td>{{ u.Email }}</td>
+            <td>{{ u.Address }}</td>
+            <td>{{ u.Phone }}</td>
+            <td>{{ u.Company }}</td>
+            <td><button type="button" class="btn btn-danger" (click)='Remove(u.Id)'>Remove Data</button></td>
+        </tr> 
+    </table>
